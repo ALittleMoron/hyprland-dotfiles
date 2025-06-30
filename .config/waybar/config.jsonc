@@ -12,7 +12,10 @@
     "hyprland/workspaces",
     "wlr/taskbar",
   ],
-  "modules-center": ["clock", "custom/weather"],
+  "modules-center": [
+    "clock",
+    "custom/weather"
+  ],
   "modules-right": [
     "custom/updates",
     "idle_inhibitor",
@@ -70,14 +73,10 @@
     "tooltip": true,
   },
   "hyprland/language": {
-    "interval": 30,
     "format": " {}",
     "format-en": "en",
     "format-us": "us",
     "format-ru": "ru",
-    "keyboard-name": "at-translated-set-2-keyboard",
-    "on-click": "~/.config/waybar/scripts/set_keyboard.sh",
-    "signal": 8,
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -124,7 +123,19 @@
     "tooltip-format-plugged": "Plugged.\n\nCurrent level: {capacity}%",
     "tooltip-format-full": "Battery is full.\n\nCurrent level: {capacity}%",
     "tooltip-format-empry": "Battery is empty!!!\n\nCurrent level: {capacity}%",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -141,7 +152,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
     "tooltip": true,
     "tooltip-format": "Volume at {volume}%. Source: {desc}",
@@ -162,7 +177,11 @@
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon}",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
     "tooltip": true,
     "tooltip-format": "Brightness at {percent}%",
     "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
@@ -179,7 +198,9 @@
     "tooltip-format": "{name} - {title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["wofi"],
+    "ignore-list": [
+      "wofi"
+    ],
   },
   "custom/weather": {
     "tooltip": true,

@@ -19,7 +19,8 @@ Some applications are not installed on other Arch based distros.
 
 ## Main packages
 
-There are main packages needed to base work. Hyprland conf packages are included in next step. You should install them with:
+There are main packages needed to base work. Hyprland conf packages are included in next
+step. You should install them with:
 
 ```bash
 yay -S neovim eza alacritty zsh docker docker-compose \
@@ -47,31 +48,16 @@ yay -S buttercup-desktop google-chrome telegram-desktop \
 
 These applications are optional, not required to configuration fully work.
 
-## TODO
-
-### Features
-
-- [ ] забиндить нотификацию о изменении громкости на кнопки наушников.
-- [ ] сделать скрипт установки.
-- [ ] Рефакторинг
-  - [ ] Избавиться от лишних биндингов.
-  - [ ] Перейти на английский язык везде (В т.ч. перевести README).
-  - [ ] Вынести общие конфиги утилит в отдельные репозитории и добавить их через submodules.
-
-### Bugs
-
-- [ ] source и volume у микрофона отображается некорректно.
-- [ ] Не работают кнопки Fn + (F1,F2,...)
-
 ## Note
 
-Данный репозиторий был позаимствован [отсюда](https://github.com/SolDoesTech/HyprV4), но
-из-за того, что я достаточно сильно его изменил, то не делал форк. Ставлю звездочку и передаю
-огромные слова благодарности автору оригинала.
+This repository was borrowed from [here](https://github.com/SolDoesTech/HyprV4), but because
+I changed it quite a lot, I didn't fork it. I give it an asterisk and a huge thank you to the
+original author.
 
-Также некоторые части кода были взяты [отсюда](https://github.com/JaKooLit/Hyprland-v3), но
-на данном конфиге я не строил свой конфиг полностью. Позаимствовал лишь структуру конфига и
-небольшие участки кода. Такая же огромная хвала автору!
+Also, some parts of the code were taken from [here](https://github.com/JaKooLit/Hyprland-v3),
+but I did not build my config entirely on this config. I only borrowed the config structure and
+small sections of code. The same huge praise to the author!
 
-Сам скрипт ещё не тестировал. Был взят из первой ссылки и доработан согласно моим изменениям, но
-тесты не проводились. Уберу данную строку, когда самолично проверю работу конфига.
+I have not tested the script itself yet. It was taken from the first link and modified according
+to my changes, but tests were not conducted. I will remove this line when I personally check the
+config's operation.
