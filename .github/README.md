@@ -2,11 +2,12 @@
 
 ## Description
 
-Config was created for Arch Linux, but you can modify it for your purpose.
+Config was created for EndeavourOS based on KDE, but you can modify it for your purpose.
+Some applications are not installed on other Arch based distros.
 
 ## Short specs
 
-- OS: Arch Linux - EndeavourOS
+- OS: EndeavourOS
 - WM: Hyprland
 - Terminal: alacritty
 - Shell: zsh
@@ -18,76 +19,51 @@ Config was created for Arch Linux, but you can modify it for your purpose.
 
 ## Main packages
 
-There are main packages needed to hyprland work. You should install them with:
+There are main packages needed to base work. Hyprland conf packages are included in next step. You should install them with:
 
 ```bash
-yay -S hyprland alacritty jq mako waybar-git swww swaylock-effects \
-       wofi wlogout xdg-desktop-portal-hyprland swappy grim slurp thunar \
-       polkit-gnome python-requests pamixer pavucontrol brightnessctl bluez \
-       bluez-utils blueman network-manager-applet gvfs thunar-archive-plugin \
-       file-roller btop pacman-contrib zsh ttf-jetbrains-mono-nerd \
-       noto-fonts-emoji lxappearance xfce4-settings sddm-git sddm-theme-astronaut \
-       wl-color-picker gsimplecal aritim-dark-gtk-git papirus-icon-theme apple-fonts \
-       thunderbird gnome-clock wttrbar
+yay -S neovim eza alacritty zsh docker docker-compose \
+       papirus-icon-theme ttf-jetbrains-mono-nerd bat \
+       fzf git-delta ripgrep bottom nodejs npm gdu \
+       lazygit go thunar aritim-dark-gtk-git \
+       rust cronie neofetch tumbler thunar-archive-plugin \
+       jq btop gvfs wl-clipboard
 ```
 
-Помимо основных пакетов есть ещё всякое дополнительное, чем я пользуюсь, но добавлять сюда и в скрипт установки
-я это не буду для того, чтобы не увеличивать время установки ещё больше. Некоторые пакеты ставятся очень
-долго.
+## hyprland packages
 
-## Вспомогательные пакеты
+yay -S hyprland waybar wttrbar mako wofi wlogout bluez bluez-utils \
+ swaylock-effects slurp grim pamixer pavucontrol brightnessctl \
+ network-manager-applet swww swappy gnome-clock wl-color-picker \
+ lxappearance gsimplecal
 
-Вспомогательные пакеты нужны Просто для работы со всякими сторорнними приложениями, либо это
-утилиты, которые я использую в терминате.
-
-Команда для уставки вспомогательных пакетов следующая:
+## Additional applications
 
 ```bash
-yay -S ripgrep fzf bat exa git-delta gwenview buttercup vivaldi pyenv gdu bottom lazygit nodejs \
-       npm
+yay -S buttercup-desktop google-chrome telegram-desktop \
+       qbittorrent v2rayn obsidian thunderbird \
+       thunderbird-i18n-ru jetbrains-toolbox
 ```
 
-Список не полный. В основном, я устанавливаю всё по ситуации + тут не указаны большие программы.
-Их можно установить на свой вкус.
+These applications are optional, not required to configuration fully work.
 
 ## TODO
 
-### Улучшения
+### Features
 
-- [x] alt + tab / Win + tab для переходов по открытым приложениям либо рабочим столам.
-- [x] доработать стили под использование темы ayu.
-- [x] оставить единственный конфиг без разделения на версии (оставить четвертую).
 - [ ] забиндить нотификацию о изменении громкости на кнопки наушников.
-- [x] поменять API погоды, либо поправить нынешнее, чтобы использовать координаты, либо конкретные города (сейчас абстрактно всегда Ставрополь).
-- [x] добавить календарь (если получится, интерактивный).
-- [x] добавить смену раскладки по нажатию на иконку в трее.
-- [x] добавить более подробную информацию по наведению на дату и время.
-- [x] добавить запуск календаря при нажатии на дату и время.
-- [x] заменить все использования команд в конфиге на исполнение скриптов (перенисти в папку scripts).
 - [ ] сделать скрипт установки.
-- [x] поменять иконки уведомлений на более подходящие для ayu-темы.
-- [x] поменять фон для экрана входа в систему.
 - [ ] Рефакторинг
   - [ ] Избавиться от лишних биндингов.
-  - [x] wttr некорректно работает. Перейти на отдельный пакет wttrbar.
   - [ ] Перейти на английский язык везде (В т.ч. перевести README).
   - [ ] Вынести общие конфиги утилит в отдельные репозитории и добавить их через submodules.
 
-### доработка тачпада:
+### Bugs
 
-[x] переключение между рабочими столами смахиванием тремя пальцами влево и вправо.
-
-### Баги
-
-- [x] update_sys.sh не работает. Просто пропадает кнопка, и всё.
-- [x] cpu виджет отображает информацию некорректно + не работает нажатие на него.
-- [x] иногда не отображается виджет погоды.
-- [x] вообще не отображается виджет температуры комплектующих.
 - [ ] source и volume у микрофона отображается некорректно.
-- [x] Не отображаются рабочие области. Нужно актуализировать исходя из документации
 - [ ] Не работают кнопки Fn + (F1,F2,...)
 
-## Примечания
+## Note
 
 Данный репозиторий был позаимствован [отсюда](https://github.com/SolDoesTech/HyprV4), но
 из-за того, что я достаточно сильно его изменил, то не делал форк. Ставлю звездочку и передаю
