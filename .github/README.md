@@ -21,7 +21,7 @@ Config was created for Arch Linux, but you can modify it for your purpose.
 There are main packages needed to hyprland work. You should install them with:
 
 ```bash
-yay -S hyprland alacritty jq mako waybar-hyprland swww swaylock-effects \
+yay -S hyprland alacritty jq mako waybar-git swww swaylock-effects \
        wofi wlogout xdg-desktop-portal-hyprland swappy grim slurp thunar \
        polkit-gnome python-requests pamixer pavucontrol brightnessctl bluez \
        bluez-utils blueman network-manager-applet gvfs thunar-archive-plugin \
@@ -69,7 +69,7 @@ yay -S ripgrep fzf bat exa git-delta gwenview buttercup vivaldi pyenv gdu bottom
 - [x] поменять фон для экрана входа в систему.
 - [ ] Рефакторинг
   - [ ] Избавиться от лишних биндингов.
-  - [ ] wttr некорректно работает. Перейти на отдельный пакет wttrbar.
+  - [x] wttr некорректно работает. Перейти на отдельный пакет wttrbar.
   - [ ] Перейти на английский язык везде (В т.ч. перевести README).
   - [ ] Вынести общие конфиги утилит в отдельные репозитории и добавить их через submodules.
 
@@ -84,7 +84,8 @@ yay -S ripgrep fzf bat exa git-delta gwenview buttercup vivaldi pyenv gdu bottom
 - [x] иногда не отображается виджет погоды.
 - [x] вообще не отображается виджет температуры комплектующих.
 - [ ] source и volume у микрофона отображается некорректно.
-- [ ] Не отображаются рабочие области. Нужно актуализировать исходя из документации
+- [x] Не отображаются рабочие области. Нужно актуализировать исходя из документации
+- [ ] Не работают кнопки Fn + (F1,F2,...)
 
 ## Примечания
 
