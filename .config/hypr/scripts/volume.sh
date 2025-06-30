@@ -104,3 +104,4 @@ elif [[ "$1" == "--mic-dec" ]]; then
 else
 	get_volume
 fi
+

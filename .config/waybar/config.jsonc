@@ -5,12 +5,12 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 20,
+  "height": 33,
   "modules-left": [
     "custom/launch_wofi",
     "custom/floating_alacritty",
-    "wlr/workspaces",
-    "wlr/taskbar"
+    "hyprland/workspaces",
+    "wlr/taskbar",
   ],
   "modules-center": ["clock", "custom/weather"],
   "modules-right": [
@@ -25,7 +25,7 @@
     "backlight",
     "battery",
     "hyprland/language",
-    "custom/power_btn"
+    "custom/power_btn",
   ],
   "temperature": {
     "interval": 2,
@@ -37,10 +37,10 @@
     "format-alt-click": "click-middle",
     "format-alt": " {temperatureC}°C",
     "format-critical": " {temperatureC}°C",
-    "on-click": "alacritty --title 'btop' -e 'btop'"
+    "on-click": "alacritty --title 'btop' -e 'btop'",
   },
   "clock": {
-    "format": "{: %Y-%m-%d  %H:%M}",
+    "format": " {:%Y-%m-%d  :%H:%M}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "on-click": "gsimplecal",
     "on-click-middle": "gnome-clocks",
@@ -56,17 +56,17 @@
         "days": "<span color='#f6f7fc'><b>{}</b></span>",
         "weeks": "<span color='#59c2ff'><b>W{}</b></span>",
         "weekdays": "<span color='#ffb454'><b>{}</b></span>",
-        "today": "<span color='#c2d94c'><b><u>{}</u></b></span>"
-      }
-    }
+        "today": "<span color='#c2d94c'><b><u>{}</u></b></span>",
+      },
+    },
   },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "󰛐",
-      "deactivated": "󰛑"
+      "deactivated": "󰛑",
     },
-    "tooltip": true
+    "tooltip": true,
   },
   "hyprland/language": {
     "interval": 30,
@@ -76,24 +76,23 @@
     "format-ru": "ru",
     "keyboard-name": "at-translated-set-2-keyboard",
     "on-click": "~/.config/waybar/scripts/set_keyboard.sh",
-    "signal": 8
+    "signal": 8,
   },
-  "wlr/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
+  "hyprland/workspaces": {
+    "format": "{icon}",
     "on-click": "activate",
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
-    }
+    "format-icon": {
+      "1": " ",
+      "2": " ",
+      "3": " ",
+      "4": " ",
+      "5": " ",
+      "6": " ",
+      "7": " ",
+      "8": " ",
+      "9": " ",
+      "10": " ",
+    },
   },
   "memory": {
     "interval": 5,
@@ -102,21 +101,21 @@
     "format-alt-click": "click-middle",
     "format-alt": "󰘚 {percentage}%",
     "tooltip-format": "RAM memory.\nTotal: {total:0.1f}GiB + {swapTotal:0.1f}GiB swap\nUsed:  {used:0.1f}GiB + {swapUsed:0.1f}GiB swap",
-    "on-click": "alacritty --title 'btop' -e 'btop'"
+    "on-click": "alacritty --title 'btop' -e 'btop'",
   },
   "cpu": {
     "interval": 5,
     "format": "󰍛",
     "format-alt-click": "click-middle",
     "format-alt": "󰍛 {usage}%",
-    "on-click": "alacritty --title 'btop' -e 'btop'"
+    "on-click": "alacritty --title 'btop' -e 'btop'",
   },
   "battery": {
     "interval": 5,
     "states": {
       "good": 80,
       "warning": 30,
-      "critical": 20
+      "critical": 20,
     },
     "format": "{icon}",
     "tooltip-format": "No charger plugged.\nPower waste: {power} Watt\nCurrent level: {capacity}%\n{timeTo}",
@@ -124,7 +123,7 @@
     "tooltip-format-plugged": "Plugged.\n\nCurrent level: {capacity}%",
     "tooltip-format-full": "Battery is full.\n\nCurrent level: {capacity}%",
     "tooltip-format-empry": "Battery is empty!!!\n\nCurrent level: {capacity}%",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -141,10 +140,10 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["", "", ""],
     },
     "tooltip": true,
-    "tooltip-format": "Volume at {volume}%. Source: {desc}"
+    "tooltip-format": "Volume at {volume}%. Source: {desc}",
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
@@ -157,7 +156,7 @@
     "scroll-step": 5,
     // пока отключил, потому что отображается некорректно
     "tooltip": false,
-    "tooltip-format": "{}"
+    "tooltip-format": "{}",
   },
   "backlight": {
     "device": "intel_backlight",
@@ -166,11 +165,11 @@
     "tooltip": true,
     "tooltip-format": "Brightness at {percent}%",
     "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
-    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec"
+    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec",
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 10
+    "spacing": 10,
   },
   "wlr/taskbar": {
     "format": "{icon}",
@@ -179,14 +178,14 @@
     "tooltip-format": "{name} - {title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["wofi"]
+    "ignore-list": ["wofi"],
   },
   "custom/weather": {
     "tooltip": true,
     "format": "{}",
     "interval": 30,
-    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-    "return-type": "json"
+    "exec": "wttrbar --location Pyatigorsk --lang ru",
+    "return-type": "json",
   },
   "custom/updates": {
     "format": "{}",
@@ -195,26 +194,26 @@
     "on-click-right": "~/.config/waybar/scripts/update_count.sh",
     "interval": 300,
     "tooltip": true,
-    "tooltip-format": "{}"
+    "tooltip-format": "{}",
   },
   "custom/power_btn": {
     "format": "",
     "on-click": "~/.config/waybar/scripts/wlogout.sh",
-    "tooltip": false
+    "tooltip": false,
   },
   "custom/lock_screen": {
     "format": "",
     "on-click": "~/.config/waybar/scripts/swaylock.sh",
-    "tooltip": false
+    "tooltip": false,
   },
   "custom/launch_wofi": {
     "format": "󱗼",
     "on-click": "~/.config/waybar/scripts/big_wofi.sh",
-    "tooltip": false
+    "tooltip": false,
   },
   "custom/floating_alacritty": {
     "format": "",
     "on-click": "~/.config/waybar/scripts/start_floating_alacritty.sh",
-    "tooltip": false
-  }
+    "tooltip": false,
+  },
 }
