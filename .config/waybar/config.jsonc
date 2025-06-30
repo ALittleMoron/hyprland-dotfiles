@@ -25,6 +25,7 @@
     "backlight",
     "battery",
     "hyprland/language",
+    "power-profiles-daemon",
     "custom/power_btn",
   ],
   "temperature": {
@@ -186,6 +187,17 @@
     "interval": 30,
     "exec": "wttrbar --location Pyatigorsk --lang ru",
     "return-type": "json",
+  },
+  "power-profiles-daemon": {
+    "format": " {icon} ",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": "",
+    },
   },
   "custom/updates": {
     "format": "{}",
