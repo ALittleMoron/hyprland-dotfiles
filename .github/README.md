@@ -33,10 +33,12 @@ yay -S neovim eza alacritty zsh docker docker-compose \
 
 ## hyprland packages
 
+```bash
 yay -S hyprland waybar wttrbar mako wofi wlogout bluez bluez-utils \
- swaylock-effects slurp grim pamixer pavucontrol brightnessctl \
- network-manager-applet swww swappy gnome-clock wl-color-picker \
- lxappearance gsimplecal
+       swaylock-effects slurp grim pamixer pavucontrol brightnessctl \
+       network-manager-applet swww swappy gnome-clock wl-color-picker \
+       lxappearance gsimplecal
+```
 
 ## Additional applications
 
